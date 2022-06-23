@@ -2,6 +2,8 @@
   "name": "split-by",
 	"displayName": "split-by",
 	"description": "Splitting into lines by something. ",
+	"publisher": "Bognaum",
+	"icon": "IMG/icon.jpg",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.68.0"
