@@ -12,14 +12,28 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:split-by.helloWorld"
+        "onCommand:splitBy.splitBy"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
+		"keybindings": [
+			{
+				"key": "alt+shift+,",
+				"args": ",\\s*",
+				"command": "splitBy.splitBy",
+				"when": "editorFocus && !editorReadonly"
+			},
+			{
+				"key": "alt+shift+;",
+				"args": ";\\s*",
+				"command": "splitBy.splitBy",
+				"when": "editorFocus && !editorReadonly"
+			}
+		],
 		"commands": [
 			{
-				"command": "split-by.helloWorld",
-				"title": "Hello World"
+				"command": "splitBy.splitBy",
+				"title": "Split by"
 			}
 		]
 	},
