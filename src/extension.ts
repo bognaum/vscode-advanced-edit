@@ -2,6 +2,7 @@ import * as vsc from 'vscode';
 // import splitBy from './commands/splitBy';
 import splitByComa from './commands/splitByComa';
 import splitBySemicolon from './commands/splitBySemicolon';
+import trimSelectionAround from './commands/trimSelectionAround';
 
 export function activate(context: vsc.ExtensionContext) {
 	const commands = [
@@ -10,7 +11,8 @@ export function activate(context: vsc.ExtensionContext) {
 		}), */
 		// vsc.commands.registerTextEditorCommand("jttss.splitBy", splitBy),
 		vsc.commands.registerTextEditorCommand("jttss.splitByComa", splitByComa),
-		vsc.commands.registerTextEditorCommand("jttss.splitBySemicolon", splitBySemicolon)
+		vsc.commands.registerTextEditorCommand("jttss.splitBySemicolon", splitBySemicolon),
+		vsc.commands.registerTextEditorCommand("jttss.trimSelectionAround", trimSelectionAround),
 	];
 
 	context.subscriptions.push(...commands);

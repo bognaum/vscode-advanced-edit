@@ -13,7 +13,8 @@
 	],
 	"activationEvents": [
         "onCommand:jttss.splitByComa",
-        "onCommand:jttss.splitBySemicolon"
+        "onCommand:jttss.splitBySemicolon",
+        "onCommand:jttss.trimSelectionAround"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -29,6 +30,11 @@
 				"args": ";\\s*",
 				"command": "jttss.splitBySemicolon",
 				"when": "editorFocus && !editorReadonly"
+			},
+			{
+				"key": "alt+shift+backspace",
+				"command": "jttss.trimSelectionAround",
+				"when": "editorFocus && !editorReadonly"
 			}
 		],
 		"commands": [
@@ -39,6 +45,10 @@
 			{
 				"command": "jttss.splitBySemicolon",
 				"title": "Split By Semicolon"
+			},
+			{
+				"command": "jttss.trimSelectionAround",
+				"title": "Trim Selection Around"
 			}
 		],
 		"menus": {
@@ -47,7 +57,8 @@
 			],
 			"jttss": [
 				{"command": "jttss.splitByComa"},
-				{"command": "jttss.splitBySemicolon"}
+				{"command": "jttss.splitBySemicolon"},
+				{"command": "jttss.trimSelectionAround"}
 			]
 		},
 		"submenus": [
