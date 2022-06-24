@@ -12,7 +12,8 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:splitBy.splitBy"
+        "onCommand:split-by.splitByComa",
+        "onCommand:split-by.splitBySemicolon"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -20,21 +21,37 @@
 			{
 				"key": "alt+shift+,",
 				"args": ",\\s*",
-				"command": "splitBy.splitBy",
+				"command": "split-by.splitByComa",
 				"when": "editorFocus && !editorReadonly"
 			},
 			{
 				"key": "alt+shift+;",
 				"args": ";\\s*",
-				"command": "splitBy.splitBy",
+				"command": "split-by.splitBySemicolon",
 				"when": "editorFocus && !editorReadonly"
 			}
 		],
 		"commands": [
 			{
-				"command": "splitBy.splitBy",
-				"title": "Split by"
+				"command": "split-by.splitByComa",
+				"title": "Split By Coma"
+			},
+			{
+				"command": "split-by.splitBySemicolon",
+				"title": "Split By Semicolon"
 			}
+		],
+		"menus": {
+			"editor/title": [
+				{"submenu": "split-by"}
+			],
+			"split-by": [
+				{"command": "split-by.splitByComa"},
+				{"command": "split-by.splitBySemicolon"}
+			]
+		},
+		"submenus": [
+			{"id": "split-by", "label": "Split By: ..."}
 		]
 	},
 	"scripts": {
