@@ -1,6 +1,6 @@
 {
-  "name": "split-by",
-	"displayName": "split-by",
+  "name": "jttss",
+	"displayName": "jttss",
 	"description": "Splitting into lines by something. ",
 	"publisher": "Bognaum",
 	"icon": "IMG/icon.jpg",
@@ -12,8 +12,8 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:split-by.splitByComa",
-        "onCommand:split-by.splitBySemicolon"
+        "onCommand:jttss.splitByComa",
+        "onCommand:jttss.splitBySemicolon"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -21,37 +21,37 @@
 			{
 				"key": "alt+shift+,",
 				"args": ",\\s*",
-				"command": "split-by.splitByComa",
+				"command": "jttss.splitByComa",
 				"when": "editorFocus && !editorReadonly"
 			},
 			{
 				"key": "alt+shift+;",
 				"args": ";\\s*",
-				"command": "split-by.splitBySemicolon",
+				"command": "jttss.splitBySemicolon",
 				"when": "editorFocus && !editorReadonly"
 			}
 		],
 		"commands": [
 			{
-				"command": "split-by.splitByComa",
+				"command": "jttss.splitByComa",
 				"title": "Split By Coma"
 			},
 			{
-				"command": "split-by.splitBySemicolon",
+				"command": "jttss.splitBySemicolon",
 				"title": "Split By Semicolon"
 			}
 		],
 		"menus": {
 			"editor/title": [
-				{"submenu": "split-by"}
+				{"submenu": "jttss"}
 			],
-			"split-by": [
-				{"command": "split-by.splitByComa"},
-				{"command": "split-by.splitBySemicolon"}
+			"jttss": [
+				{"command": "jttss.splitByComa"},
+				{"command": "jttss.splitBySemicolon"}
 			]
 		},
 		"submenus": [
-			{"id": "split-by", "label": "Split By: ..."}
+			{"id": "jttss", "label": "JTTSS: ..."}
 		]
 	},
 	"scripts": {
