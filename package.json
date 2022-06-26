@@ -35,6 +35,16 @@
 				"key": "alt+shift+backspace",
 				"command": "advanced-edit.trimSelectionAround",
 				"when": "editorFocus && !editorReadonly"
+			},
+			{
+				"key": "shift+enter",
+				"command": "advanced-edit.tripleSplit",
+				"when": "editorFocus && !editorReadonly"
+			},
+			{
+				"key": "alt+shift+=",
+				"command": "advanced-edit.joinLines",
+				"when": "editorFocus && !editorReadonly"
 			}
 		],
 		"commands": [
