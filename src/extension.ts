@@ -6,13 +6,13 @@ import trimSelectionAround from './commands/trimSelectionAround';
 
 export function activate(context: vsc.ExtensionContext) {
 	const commands = [
-		/* vsc.commands.registerCommand('jttss.helloWorld', () => {
-			vsc.window.showInformationMessage('Hello World from jttss!');
+		/* vsc.commands.registerCommand('advanced-edit.helloWorld', () => {
+			vsc.window.showInformationMessage('Hello World from advanced-edit!');
 		}), */
-		// vsc.commands.registerTextEditorCommand("jttss.splitBy", splitBy),
-		vsc.commands.registerTextEditorCommand("jttss.splitByComa", splitByComa),
-		vsc.commands.registerTextEditorCommand("jttss.splitBySemicolon", splitBySemicolon),
-		vsc.commands.registerTextEditorCommand("jttss.trimSelectionAround", trimSelectionAround),
+		// vsc.commands.registerTextEditorCommand("advanced-edit.splitBy", splitBy),
+		vsc.commands.registerTextEditorCommand("advanced-edit.splitByComa", splitByComa),
+		vsc.commands.registerTextEditorCommand("advanced-edit.splitBySemicolon", splitBySemicolon),
+		vsc.commands.registerTextEditorCommand("advanced-edit.trimSelectionAround", trimSelectionAround),
 	];
 
 	context.subscriptions.push(...commands);

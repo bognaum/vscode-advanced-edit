@@ -1,7 +1,7 @@
 {
-  "name": "jttss",
-	"displayName": "jttss",
-	"description": "Splitting into lines by something. ",
+  "name": "advanced-edit",
+	"displayName": "Advanced edit",
+	"description": "Advanced text processing operations.",
 	"publisher": "Bognaum",
 	"icon": "IMG/icon.jpg",
 	"version": "0.0.1",
@@ -12,57 +12,55 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:jttss.splitByComa",
-        "onCommand:jttss.splitBySemicolon",
-        "onCommand:jttss.trimSelectionAround"
+        "onCommand:advanced-edit.splitByComa",
+        "onCommand:advanced-edit.splitBySemicolon",
+        "onCommand:advanced-edit.trimSelectionAround"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"keybindings": [
 			{
 				"key": "alt+shift+,",
-				"args": ",\\s*",
-				"command": "jttss.splitByComa",
+				"command": "advanced-edit.splitByComa",
 				"when": "editorFocus && !editorReadonly"
 			},
 			{
 				"key": "alt+shift+;",
-				"args": ";\\s*",
-				"command": "jttss.splitBySemicolon",
+				"command": "advanced-edit.splitBySemicolon",
 				"when": "editorFocus && !editorReadonly"
 			},
 			{
 				"key": "alt+shift+backspace",
-				"command": "jttss.trimSelectionAround",
+				"command": "advanced-edit.trimSelectionAround",
 				"when": "editorFocus && !editorReadonly"
 			}
 		],
 		"commands": [
 			{
-				"command": "jttss.splitByComa",
-				"title": "Split By Coma"
+				"command": "advanced-edit.splitByComa",
+				"title": "Advanced Edit: Split By Coma"
 			},
 			{
-				"command": "jttss.splitBySemicolon",
-				"title": "Split By Semicolon"
+				"command": "advanced-edit.splitBySemicolon",
+				"title": "Advanced Edit: Split By Semicolon"
 			},
 			{
-				"command": "jttss.trimSelectionAround",
-				"title": "Trim Selection Around"
+				"command": "advanced-edit.trimSelectionAround",
+				"title": "Advanced Edit: Trim Selection Around"
 			}
 		],
 		"menus": {
 			"editor/title": [
-				{"submenu": "jttss"}
+				{"submenu": "advanced-edit"}
 			],
-			"jttss": [
-				{"command": "jttss.splitByComa"},
-				{"command": "jttss.splitBySemicolon"},
-				{"command": "jttss.trimSelectionAround"}
+			"advanced-edit": [
+				{"command": "advanced-edit.splitByComa"},
+				{"command": "advanced-edit.splitBySemicolon"},
+				{"command": "advanced-edit.trimSelectionAround"}
 			]
 		},
 		"submenus": [
-			{"id": "jttss", "label": "JTTSS: ..."}
+			{"id": "advanced-edit", "label": "Advanced Edit ..."}
 		]
 	},
 	"scripts": {
