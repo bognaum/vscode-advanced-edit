@@ -3,6 +3,7 @@ import * as vsc from 'vscode';
 import splitByComa from './commands/splitByComa';
 import splitBySemicolon from './commands/splitBySemicolon';
 import trimSelectionAround from './commands/trimSelectionAround';
+import tripleSplit from './commands/tripleSplit';
 
 export function activate(context: vsc.ExtensionContext) {
 	const commands = [
@@ -13,6 +14,7 @@ export function activate(context: vsc.ExtensionContext) {
 		vsc.commands.registerTextEditorCommand("advanced-edit.splitByComa", splitByComa),
 		vsc.commands.registerTextEditorCommand("advanced-edit.splitBySemicolon", splitBySemicolon),
 		vsc.commands.registerTextEditorCommand("advanced-edit.trimSelectionAround", trimSelectionAround),
+		vsc.commands.registerTextEditorCommand("advanced-edit.tripleSplit", tripleSplit),
 	];
 
 	context.subscriptions.push(...commands);

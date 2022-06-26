@@ -14,7 +14,8 @@
 	"activationEvents": [
         "onCommand:advanced-edit.splitByComa",
         "onCommand:advanced-edit.splitBySemicolon",
-        "onCommand:advanced-edit.trimSelectionAround"
+        "onCommand:advanced-edit.trimSelectionAround",
+        "onCommand:advanced-edit.tripleSplit"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -47,6 +48,10 @@
 			{
 				"command": "advanced-edit.trimSelectionAround",
 				"title": "Advanced Edit: Trim Selection Around"
+			},
+			{
+				"command": "advanced-edit.tripleSplit",
+				"title": "Advanced Edit: Triple Split With Indent"
 			}
 		],
 		"menus": {
@@ -56,7 +61,8 @@
 			"advanced-edit": [
 				{"command": "advanced-edit.splitByComa"},
 				{"command": "advanced-edit.splitBySemicolon"},
-				{"command": "advanced-edit.trimSelectionAround"}
+				{"command": "advanced-edit.trimSelectionAround"},
+				{"command": "advanced-edit.tripleSplit"}
 			]
 		},
 		"submenus": [
