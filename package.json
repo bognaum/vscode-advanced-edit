@@ -15,7 +15,8 @@
         "onCommand:advanced-edit.splitByComa",
         "onCommand:advanced-edit.splitBySemicolon",
         "onCommand:advanced-edit.trimSelectionAround",
-        "onCommand:advanced-edit.tripleSplit"
+        "onCommand:advanced-edit.tripleSplit",
+        "onCommand:advanced-edit.joinLines"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -52,6 +53,10 @@
 			{
 				"command": "advanced-edit.tripleSplit",
 				"title": "Advanced Edit: Triple Split With Indent"
+			},
+			{
+				"command": "advanced-edit.joinLines",
+				"title": "Advanced Edit: Join Lines"
 			}
 		],
 		"menus": {
@@ -62,7 +67,8 @@
 				{"command": "advanced-edit.splitByComa"},
 				{"command": "advanced-edit.splitBySemicolon"},
 				{"command": "advanced-edit.trimSelectionAround"},
-				{"command": "advanced-edit.tripleSplit"}
+				{"command": "advanced-edit.tripleSplit"},
+				{"command": "advanced-edit.joinLines"}
 			]
 		},
 		"submenus": [
