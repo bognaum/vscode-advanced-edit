@@ -3,7 +3,7 @@
 	"displayName": "Advanced edit",
 	"description": "Advanced text processing operations.",
 	"publisher": "Bognaum",
-	"icon": "IMG/icon.jpg",
+	"icon": "IMG/keyboard_78429.png",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.68.0"
