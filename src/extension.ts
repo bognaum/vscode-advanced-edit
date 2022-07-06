@@ -1,29 +1,26 @@
 import * as vsc from 'vscode';
-import splitBy from './commands/splitBy';
-// import splitByComa from './commands/splitByComa';
-// import splitBySemicolon from './commands/splitBySemicolon';
-import trimSelectionAround from './commands/trimSelectionAround';
+import splitBy                   from './commands/splitBy';
+import trimSelectionAround       from './commands/trimSelectionAround';
 import trimSpacesAroundSelection from './commands/trimSpacesAroundSelection';
-import tripleSplit from './commands/tripleSplit';
-import joinLines from './commands/joinLines';
-import joinLinesWithSpaces from './commands/joinLinesWithSpaces';
-import joinLinesWithoutSpaces from './commands/joinLinesWithoutSpaces';
+import tripleSplit               from './commands/tripleSplit';
+import joinLines                 from './commands/joinLines';
+import joinLinesWithSpaces       from './commands/joinLinesWithSpaces';
+import joinLinesWithoutSpaces    from './commands/joinLinesWithoutSpaces';
 
 export function activate(context: vsc.ExtensionContext) {
 	const commands = [
-		/* vsc.commands.registerCommand('advanced-edit.helloWorld', () => {
-			vsc.window.showInformationMessage('Hello World from advanced-edit!');
-		}), */
-		// vsc.commands.registerTextEditorCommand("advanced-edit.splitBy", splitBy),
-		vsc.commands.registerTextEditorCommand("advanced-edit.trimSelectionAround", trimSelectionAround),
-		vsc.commands.registerTextEditorCommand("advanced-edit.tripleSplit", tripleSplit),
-		vsc.commands.registerTextEditorCommand("advanced-edit.joinLines", joinLines),
+		vsc.commands.registerTextEditorCommand("advanced-edit.trimSelectionAround", 
+			trimSelectionAround),
+		vsc.commands.registerTextEditorCommand("advanced-edit.tripleSplit", 
+			tripleSplit),
+		vsc.commands.registerTextEditorCommand("advanced-edit.joinLines", 
+			joinLines),
 		vsc.commands.registerTextEditorCommand("advanced-edit.joinLinesWithSpaces", 
-		joinLinesWithSpaces),
+			joinLinesWithSpaces),
 		vsc.commands.registerTextEditorCommand("advanced-edit.joinLinesWithoutSpaces", 
-		joinLinesWithoutSpaces),
+			joinLinesWithoutSpaces),
 		vsc.commands.registerTextEditorCommand("advanced-edit.trimSpacesAroundSelection", 
-		trimSpacesAroundSelection),
+			trimSpacesAroundSelection),
 		vsc.commands.registerTextEditorCommand("advanced-edit.splitByComa", 
 			function splitByComa( tEditor: vsc.TextEditor, edit: vsc.TextEditorEdit, ) {
 				splitBy(tEditor, edit, ",\\s*");
