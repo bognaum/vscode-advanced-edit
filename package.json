@@ -14,6 +14,7 @@
 	"activationEvents": [
 		"onCommand:advanced-edit.trimSelectionAround",
 		"onCommand:advanced-edit.trimSpacesAroundSelection",
+		"onCommand:advanced-edit.tripleJoin",
         "onCommand:advanced-edit.tripleSplit",
         "onCommand:advanced-edit.joinLines",
         "onCommand:advanced-edit.joinLinesWithSpaces",
@@ -37,7 +38,7 @@
 			},
 			{
 				"key": "shift+backspace",
-				"command": "advanced-edit.trimSpacesAroundSelection",
+				"command": "advanced-edit.tripleJoin",
 				"when": "editorFocus && !editorReadonly"
 			},
 			{
@@ -98,6 +99,10 @@
 				"title": "Advanced Edit: Trim Spaces Around Selection"
 			},
 			{
+				"command": "advanced-edit.tripleJoin",
+				"title": "Advanced Edit: Triple Join"
+			},
+			{
 				"command": "advanced-edit.tripleSplit",
 				"title": "Advanced Edit: Triple Split With Indent"
 			},
@@ -147,6 +152,7 @@
 			"advanced-edit": [
 				{"command": "advanced-edit.trimSelectionAround"},
 				{"command": "advanced-edit.trimSpacesAroundSelection"},
+				{"command": "advanced-edit.tripleJoin"},
 				{"command": "advanced-edit.tripleSplit"},
 				{"command": "advanced-edit.joinLines"},
 

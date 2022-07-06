@@ -3,6 +3,7 @@ import splitBy                   from './commands/splitBy';
 import trimSelectionAround       from './commands/trimSelectionAround';
 import trimSpacesAroundSelection from './commands/trimSpacesAroundSelection';
 import tripleSplit               from './commands/tripleSplit';
+import tripleJoin                from './commands/tripleJoin';
 import joinLines                 from './commands/joinLines';
 import joinLinesWithSpaces       from './commands/joinLinesWithSpaces';
 import joinLinesWithoutSpaces    from './commands/joinLinesWithoutSpaces';
@@ -21,6 +22,8 @@ export function activate(context: vsc.ExtensionContext) {
 			joinLinesWithoutSpaces),
 		vsc.commands.registerTextEditorCommand("advanced-edit.trimSpacesAroundSelection", 
 			trimSpacesAroundSelection),
+		vsc.commands.registerTextEditorCommand("advanced-edit.tripleJoin", 
+			tripleJoin),
 		vsc.commands.registerTextEditorCommand("advanced-edit.splitByComa", 
 			function splitByComa( tEditor: vsc.TextEditor, edit: vsc.TextEditorEdit, ) {
 				splitBy(tEditor, edit, ",\\s*");
