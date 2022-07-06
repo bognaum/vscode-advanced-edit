@@ -5,6 +5,8 @@ import splitBySemicolon from './commands/splitBySemicolon';
 import trimSelectionAround from './commands/trimSelectionAround';
 import tripleSplit from './commands/tripleSplit';
 import joinLines from './commands/joinLines';
+import joinLinesWithSpaces from './commands/joinLinesWithSpaces';
+import joinLinesWithoutSpaces from './commands/joinLinesWithoutSpaces';
 
 export function activate(context: vsc.ExtensionContext) {
 	const commands = [
@@ -17,6 +19,10 @@ export function activate(context: vsc.ExtensionContext) {
 		vsc.commands.registerTextEditorCommand("advanced-edit.trimSelectionAround", trimSelectionAround),
 		vsc.commands.registerTextEditorCommand("advanced-edit.tripleSplit", tripleSplit),
 		vsc.commands.registerTextEditorCommand("advanced-edit.joinLines", joinLines),
+		vsc.commands.registerTextEditorCommand("advanced-edit.joinLinesWithSpaces", 
+			joinLinesWithSpaces),
+		vsc.commands.registerTextEditorCommand("advanced-edit.joinLinesWithoutSpaces", 
+			joinLinesWithoutSpaces),
 	];
 
 	context.subscriptions.push(...commands);

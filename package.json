@@ -16,18 +16,20 @@
         "onCommand:advanced-edit.splitBySemicolon",
         "onCommand:advanced-edit.trimSelectionAround",
         "onCommand:advanced-edit.tripleSplit",
-        "onCommand:advanced-edit.joinLines"
+        "onCommand:advanced-edit.joinLines",
+        "onCommand:advanced-edit.joinLinesWithSpaces",
+        "onCommand:advanced-edit.joinLinesWithoutSpaces"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"keybindings": [
 			{
-				"key": "alt+shift+,",
+				"key": "alt+shift+/ ,",
 				"command": "advanced-edit.splitByComa",
 				"when": "editorFocus && !editorReadonly"
 			},
 			{
-				"key": "alt+shift+;",
+				"key": "alt+shift+/ ;",
 				"command": "advanced-edit.splitBySemicolon",
 				"when": "editorFocus && !editorReadonly"
 			},
@@ -42,8 +44,13 @@
 				"when": "editorFocus && !editorReadonly"
 			},
 			{
+				"key": "alt+shift+-",
+				"command": "advanced-edit.joinLinesWithoutSpaces",
+				"when": "editorFocus && !editorReadonly"
+			},
+			{
 				"key": "alt+shift+=",
-				"command": "advanced-edit.joinLines",
+				"command": "advanced-edit.joinLinesWithSpaces",
 				"when": "editorFocus && !editorReadonly"
 			}
 		],
@@ -67,6 +74,14 @@
 			{
 				"command": "advanced-edit.joinLines",
 				"title": "Advanced Edit: Join Lines"
+			},
+			{
+				"command": "advanced-edit.joinLinesWithSpaces",
+				"title": "Advanced Edit: Join Lines With Spaces"
+			},
+			{
+				"command": "advanced-edit.joinLinesWithoutSpaces",
+				"title": "Advanced Edit: Join Lines Without Spaces"
 			}
 		],
 		"menus": {

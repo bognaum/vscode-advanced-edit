@@ -1,6 +1,10 @@
 import * as vsc from "vscode";
 
-export default function splitBy(tEditor: vsc.TextEditor, edit: vsc.TextEditorEdit, splitter: string) {
+export default function splitBy(
+	tEditor: vsc.TextEditor, 
+	edit: vsc.TextEditorEdit, 
+	splitter: string
+) {
 	const 
 		doc  = tEditor.document,
 		opts = tEditor.options,
