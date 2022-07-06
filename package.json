@@ -150,18 +150,19 @@
 				{"submenu": "advanced-edit"}
 			],
 			"advanced-edit": [
-				{"command": "advanced-edit.trimSelectionAround"},
-				{"command": "advanced-edit.trimSpacesAroundSelection"},
-				{"command": "advanced-edit.tripleJoin"},
-				{"command": "advanced-edit.tripleSplit"},
-				{"command": "advanced-edit.joinLines"},
+				{"command": "advanced-edit.tripleJoin" , "group": "1"},
+				{"command": "advanced-edit.tripleSplit", "group": "1"},
 
-				{"command": "advanced-edit.splitByComa"},
-				{"command": "advanced-edit.splitBySemicolon"},
-				{"command": "advanced-edit.splitBySpace"},
-				{"command": "advanced-edit.splitByPoint"},
-				{"command": "advanced-edit.splitByGT"},
-				{"command": "advanced-edit.splitByLT"}
+				{"command": "advanced-edit.splitByComa"     , "group": "2"},
+				{"command": "advanced-edit.splitBySemicolon", "group": "2"},
+				{"command": "advanced-edit.splitBySpace"    , "group": "2"},
+				{"command": "advanced-edit.splitByPoint"    , "group": "2"},
+				{"command": "advanced-edit.splitByGT"       , "group": "2"},
+				{"command": "advanced-edit.splitByLT"       , "group": "2"},
+
+				{"command": "advanced-edit.trimSelectionAround"      , "group": "3"},
+				{"command": "advanced-edit.trimSpacesAroundSelection", "group": "3"},
+				{"command": "advanced-edit.joinLines"                , "group": "3"}
 			]
 		},
 		"submenus": [
