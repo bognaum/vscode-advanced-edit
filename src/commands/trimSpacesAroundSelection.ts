@@ -41,7 +41,7 @@ function invadeSpacesAround(doc: vsc.TextDocument, range: vsc.Range): vsc.Range 
 		}
 	}
 
-	nextI = given.endOffset + 1;
+	nextI = given.endOffset;
 	while (text[i = nextI++]) {
 		if (text[i].match(/\s/)) {
 			continue;
