@@ -104,7 +104,7 @@
 			},
 			{
 				"command": "advanced-edit.tripleSplit",
-				"title": "Advanced Edit: Triple Split With Indent"
+				"title": "Advanced Edit: Triple Split"
 			},
 			{
 				"command": "advanced-edit.joinLines",
