@@ -1,9 +1,17 @@
 import * as vsc from "vscode";
 
+interface CallOpts {
+	eolBefore?: boolean;
+	eolAfter?: boolean;
+}
+
+const defOpts: CallOpts = {eolAfter: true};
+
 export default function splitBy(
 	tEditor: vsc.TextEditor, 
 	edit: vsc.TextEditorEdit, 
-	splitter: string
+	splitter: string,
+	cOpts: CallOpts =defOpts,
 ) {
 	const 
 		doc  = tEditor.document,
@@ -24,7 +32,10 @@ export default function splitBy(
 
 			for (const [k, v]of splitted.entries()) {}
 
-			const joiners = splitters.map(v => v + EOL + baseIndent);
+			const 
+				before  = cOpts.eolBefore ? EOL + baseIndent : "",
+				after   = cOpts.eolAfter  ? EOL + baseIndent : "",
+				joiners = splitters.map(v => before + v + after);
 			joiners.push("");
 			const resultText = splitted
 				.map((v, i) =>  v + joiners[i])
