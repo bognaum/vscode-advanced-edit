@@ -7,6 +7,7 @@ import tripleJoin                from './commands/tripleJoin';
 import joinLines                 from './commands/joinLines';
 import joinLinesWithSpaces       from './commands/joinLinesWithSpaces';
 import joinLinesWithoutSpaces    from './commands/joinLinesWithoutSpaces';
+import alignCursors              from './commands/alignCursors';
 
 export function activate(context: vsc.ExtensionContext) {
 	const commands = [
@@ -24,6 +25,8 @@ export function activate(context: vsc.ExtensionContext) {
 			trimSpacesAroundSelection),
 		vsc.commands.registerTextEditorCommand("advanced-edit.tripleJoin", 
 			tripleJoin),
+		vsc.commands.registerTextEditorCommand("advanced-edit.alignCursors", 
+			alignCursors),
 		vsc.commands.registerTextEditorCommand("advanced-edit.splitByComa", 
 			function splitByComa( tEditor: vsc.TextEditor, edit: vsc.TextEditorEdit, ) {
 				splitBy(tEditor, edit, ",\\s*");
