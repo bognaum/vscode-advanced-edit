@@ -20,6 +20,7 @@
         "onCommand:advanced-edit.joinLinesWithSpaces",
         "onCommand:advanced-edit.joinLinesWithoutSpaces",
         "onCommand:advanced-edit.alignCursors",
+        "onCommand:advanced-edit.deleteToLineBegin",
 
 
         "onCommand:advanced-edit.splitByComa",
@@ -60,6 +61,11 @@
 			{
 				"key": "alt+shift+\\",
 				"command": "advanced-edit.alignCursors",
+				"when": "editorFocus && !editorReadonly"
+			},
+			{
+				"key": "ctrl+shift+backspace",
+				"command": "advanced-edit.deleteToLineBegin",
 				"when": "editorFocus && !editorReadonly"
 			},
 
@@ -128,6 +134,10 @@
 				"command": "advanced-edit.alignCursors",
 				"title": "Advanced Edit: Align Cursors"
 			},
+			{
+				"command": "advanced-edit.deleteToLineBegin",
+				"title": "Advanced Edit: Delete To Line Begin"
+			},
 
 
 			{
@@ -163,6 +173,7 @@
 				{"command": "advanced-edit.tripleJoin" , "group": "1"},
 				{"command": "advanced-edit.tripleSplit", "group": "1"},
 				{"command": "advanced-edit.alignCursors", "group": "1"},
+				{"command": "advanced-edit.deleteToLineBegin", "group": "1"},
 
 				{"command": "advanced-edit.splitByComa"     , "group": "2"},
 				{"command": "advanced-edit.splitBySemicolon", "group": "2"},
