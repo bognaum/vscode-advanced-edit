@@ -170,9 +170,9 @@
 				{"submenu": "advanced-edit"}
 			],
 			"advanced-edit": [
-				{"command": "advanced-edit.tripleJoin" , "group": "1"},
-				{"command": "advanced-edit.tripleSplit", "group": "1"},
-				{"command": "advanced-edit.alignCursors", "group": "1"},
+				{"command": "advanced-edit.tripleJoin"       , "group": "1"},
+				{"command": "advanced-edit.tripleSplit"      , "group": "1"},
+				{"command": "advanced-edit.alignCursors"     , "group": "1"},
 				{"command": "advanced-edit.deleteToLineBegin", "group": "1"},
 
 				{"command": "advanced-edit.splitByComa"     , "group": "2"},
