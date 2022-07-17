@@ -170,21 +170,22 @@
 				{"submenu": "advanced-edit"}
 			],
 			"advanced-edit": [
-				{"command": "advanced-edit.tripleJoin"       , "group": "1"},
-				{"command": "advanced-edit.tripleSplit"      , "group": "1"},
-				{"command": "advanced-edit.alignCursors"     , "group": "1"},
-				{"command": "advanced-edit.deleteToLineBegin", "group": "1"},
+				{"command": "advanced-edit.tripleJoin" , "group": "1"},
+				{"command": "advanced-edit.tripleSplit", "group": "1"},
 
-				{"command": "advanced-edit.splitByComa"     , "group": "2"},
-				{"command": "advanced-edit.splitBySemicolon", "group": "2"},
-				{"command": "advanced-edit.splitBySpace"    , "group": "2"},
-				{"command": "advanced-edit.splitByPoint"    , "group": "2"},
-				{"command": "advanced-edit.splitByGT"       , "group": "2"},
-				{"command": "advanced-edit.splitByLT"       , "group": "2"},
+				{"command": "advanced-edit.alignCursors"     , "group": "2"},
+				{"command": "advanced-edit.deleteToLineBegin", "group": "2"},
 
-				{"command": "advanced-edit.trimSelectionAround"      , "group": "3"},
-				{"command": "advanced-edit.trimSpacesAroundSelection", "group": "3"},
-				{"command": "advanced-edit.joinLines"                , "group": "3"}
+				{"command": "advanced-edit.splitByComa"     , "group": "3"},
+				{"command": "advanced-edit.splitBySemicolon", "group": "3"},
+				{"command": "advanced-edit.splitBySpace"    , "group": "3"},
+				{"command": "advanced-edit.splitByPoint"    , "group": "3"},
+				{"command": "advanced-edit.splitByGT"       , "group": "3"},
+				{"command": "advanced-edit.splitByLT"       , "group": "3"},
+
+				{"command": "advanced-edit.trimSelectionAround"      , "group": "4"},
+				{"command": "advanced-edit.trimSpacesAroundSelection", "group": "4"},
+				{"command": "advanced-edit.joinLines"                , "group": "4"}
 			]
 		},
 		"submenus": [
