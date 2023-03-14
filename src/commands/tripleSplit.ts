@@ -18,20 +18,17 @@ export default function tripleSplit(
 	tEditor.edit((edit) => {
 		for (const sel of tEditor.selections) {
 			const 
-				startLine    = doc.lineAt(sel.start),
-				indent       = (startLine.text.match(/^\s*/) || [""])[0],
-				beforeSel    = EOL + indent + TAB,
-				selectedText = doc.getText(sel),
-				isEmpty      = !selectedText.length,
+				startLine      = doc.lineAt(sel.start),
+				indent         = (startLine.text.match(/^\s*/) || [""])[0],
+				beforeSel      = EOL + indent + TAB,
+				selectedText   = doc.getText(sel),
+				isEmpty        = !selectedText.length,
 				selTextAsLines = selectedText.split(EOL),
-				afterSel     = EOL+indent;
+				afterSel       = EOL+indent;
 
 			const resultText = 
 				beforeSel + selTextAsLines.join(EOL + TAB) + afterSel;
 
-			/* const resultText = 
-				selTextAsLines.map(v => EOL + indent + TAB + v.trimStart()).join() 
-					+ EOL + indent; */
 			edit.replace(sel, resultText);
 			offsets.push([(beforeSel).length, -(afterSel).length]);
 			isEmpties.push(isEmpty);
