@@ -10,6 +10,7 @@ export default function tripleSplit(
 		opts = tEditor.options,
 		EOL  = ["", "\n", "\r\n"][doc.eol],
 		selects: vsc.Selection[]    = [],
+		isEmpties: boolean[] = [],
 		offsets: [number, number][] = [];
 	const TAB  = opts.insertSpaces && typeof opts.tabSize === "number" ? 
 		" ".repeat(opts.tabSize) : "\t";
@@ -21,6 +22,7 @@ export default function tripleSplit(
 				indent       = (startLine.text.match(/^\s*/) || [""])[0],
 				beforeSel    = EOL + indent + TAB,
 				selectedText = doc.getText(sel),
+				isEmpty      = !selectedText.length,
 				selTextAsLines = selectedText.split(EOL),
 				afterSel     = EOL+indent;
 
@@ -31,15 +33,20 @@ export default function tripleSplit(
 				selTextAsLines.map(v => EOL + indent + TAB + v.trimStart()).join() 
 					+ EOL + indent; */
 			edit.replace(sel, resultText);
-			offsets.push([(EOL + indent + TAB).length, -(EOL + indent).length]);
+			offsets.push([(beforeSel).length, -(afterSel).length]);
+			isEmpties.push(isEmpty);
 		}
 	})
 	.then((ok) => {
 		if (ok) {
 			for (const [k,sel] of tEditor.selections.entries()) {
 				const 
-					start = doc.positionAt(doc.offsetAt(sel.start) + offsets[k][0]),
-					end   = doc.positionAt(doc.offsetAt(sel.end)   + offsets[k][1]);
+					[startOffset, endOffset] = offsets[k],
+					isEmpty = isEmpties[k],
+					end   = doc.positionAt(doc.offsetAt(sel.end) + endOffset  ),
+					start = isEmpty ? 
+						end 
+						: doc.positionAt(doc.offsetAt(sel.start) + startOffset);
 				selects.push(new vsc.Selection(start, end));
 			}
 			tEditor.selections = selects;
