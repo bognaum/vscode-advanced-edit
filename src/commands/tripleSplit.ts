@@ -24,8 +24,8 @@ export default function tripleSplit(
 				selTextAsLines = selectedText.split(EOL),
 				afterSel     = EOL+indent;
 
-			const resultText = EOL + indent + TAB +
-				selTextAsLines.join(EOL + TAB) + EOL + indent;
+			const resultText = 
+				beforeSel + selTextAsLines.join(EOL + TAB) + afterSel;
 
 			/* const resultText = 
 				selTextAsLines.map(v => EOL + indent + TAB + v.trimStart()).join() 
