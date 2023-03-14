@@ -15,7 +15,7 @@ export default function tripleSplit(
 		" ".repeat(opts.tabSize) : "\t";
 
 	tEditor.edit((edit) => {
-		for (let sel of tEditor.selections) {
+		for (const sel of tEditor.selections) {
 			const 
 				startLine    = doc.lineAt(sel.start),
 				indent       = (startLine.text.match(/^\s*/) || [""])[0],
@@ -36,7 +36,7 @@ export default function tripleSplit(
 	})
 	.then((ok) => {
 		if (ok) {
-			for (let [k,sel] of tEditor.selections.entries()) {
+			for (const [k,sel] of tEditor.selections.entries()) {
 				const 
 					start = doc.positionAt(doc.offsetAt(sel.start) + offsets[k][0]),
 					end   = doc.positionAt(doc.offsetAt(sel.end)   + offsets[k][1]);
